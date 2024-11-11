@@ -1,0 +1,110 @@
+.body {
+    display: flex;
+    min-height: 100vh; /* Ensure the body stretches to full viewport height */
+    background-color: white; /* Background color behind the sidebar */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #14a0e6;
+    color: #fff;
+}
+
+.user-name {
+    font-size: 20px;
+    padding-left: 17px;
+}
+
+.user-name img {
+    width: 100px;
+}
+
+.header i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.header i:hover {
+    color: #127b8e;
+}
+
+.user-p {
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+
+.user-p img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-p h4 {
+    color: #ccc;
+    padding: 5px 0;
+}
+
+.side-navbar {
+    width: 270px;
+    background: #14a0e6;
+    min-height: 100vh;
+    transition: 400ms width;
+    position: relative;
+}
+
+.side-navbar ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.side-navbar ul li {
+    font-size: 16px;
+    padding: 15px 0;
+    padding-left: 20px;
+    transition: 500ms background;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.side-navbar ul li:hover {
+    background: #127b8e;
+}
+
+.side-navbar ul li a {
+    text-decoration: none;
+    color: #eee;
+    letter-spacing: 1px;
+}
+
+.side-navbar ul li a i {
+    display: inline-block;
+    padding-right: 3px;
+    font-size: 23px;
+}
+
+#navbar-btn {
+    display: inline-block;
+    margin-left: 70px;
+    font-size: 20px;
+    transition: 500ms color;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked ~ .body .side-navbar {
+    width: 60px;
+}
+
+#checkbox:checked ~ .body .side-navbar .user-p {
+    visibility: hidden;
+}
+
+#checkbox:checked ~ .body .side-navbar a span {
+    display: none;
+}

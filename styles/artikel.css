@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --maincolor: #14a0e6;
+    --secondcolor: #f8a803;
+    --thirdcolor: #f4ab01;
+    --textcolor: #4A5764;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* Hover global untuk elemen */
+nav a:hover,
+.home-btn:hover,
+.brief-story .read-more:hover,
+.artikel-box:hover,
+.back-button:hover,
+.footer-icon:hover img {
+    background-color: var(--maincolor);
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek hover tambahan untuk elemen khusus */
+nav a:hover::before,
+.back-button:hover::before,
+.artikel-box:hover::before {
+    width: 100%;
+}
+
+/* Menambahkan elemen pseudo untuk efek hover */
+nav a::before,
+.back-button::before,
+.artikel-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--maincolor);
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+}
+
+.home-btn:hover::before,
+nav a:hover::before,
+.brief-story .read-more:hover::before {
+    width: 100%;
+}
+
+nav a,
+.home-btn a,
+.brief-story .read-more {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--maincolor);
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 75px;
+}
+
+.logo-container img {
+    height: 190px;
+    width: auto;
+    margin-right: 1rem;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.6rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: var(--maincolor); /* Button initial color set to second color */
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-color: #00aaff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+/* Artikel */
+
+.section-title {
+    display: flex;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    margin-left: 2rem;
+    
+}
+.artikel-section {
+    max-width: 1550px;
+    margin: 8rem auto;
+    padding: 2rem;
+    background-color: #f0f7fc;
+}
+
+.artikel-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.artikel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.artikel-info {
+    flex: 1;
+}
+
+.artikel-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--textcolor);
+    font-weight: 600;
+}
+
+.artikel-body p {
+    font-size: 1.6rem;
+    color: #4A5764;
+    line-height: 1.8;
+    text-indent: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.artikel-image {
+    flex-basis: 30%;
+}
+
+.artikel-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.artikel-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Back button */
+.back-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.back-button {
+    background-color: var(--secondcolor); /* Button initial color set to second color */
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #00aaff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* footer */
+.footer {
+    background-color: #3384b8;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    margin-bottom: 10px;
+}
+
+.footer-icon {
+    display: inline-block;
+    margin: 0 8px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.footer-icon:hover img {
+    transform: translateY(-10px);
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-top: 10px;
+}

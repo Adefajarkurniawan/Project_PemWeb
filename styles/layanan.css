@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root{
+    --maincolor:#14a0e6;
+    --secondcolor:#f8a803;
+    --thirdcolor:#f4ab01;
+    --textcolor:#4A5764;
+}
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* Hover global untuk elemen */
+nav a:hover, 
+.home-btn:hover{ 
+    background-color: var(--maincolor); 
+    color: #ffffff; 
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out; 
+}   
+
+/* Efek hover */
+.inner-technology:hover span, 
+nav a:hover::before, 
+.home-btn a:hover::before { 
+    width: 100%; 
+}
+
+.home-btn::before, 
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--secondcolor);
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+}
+
+.home-btn:hover::before, 
+nav a:hover::before {
+    width: 100%; 
+}
+
+
+nav a, 
+.home-btn a, 
+.brief-story .read-more {
+    position: relative;
+    overflow: hidden; 
+}
+
+  
+/*  Header/Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--maincolor); 
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 75px;
+    
+  }
+  
+.logo-container img {
+    height: 190px; 
+    width: auto;
+    margin-right: 1rem;
+}
+  
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #00aaff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.service-header {
+    background-color: white; 
+    color: black;
+    padding: 5rem 5rem;
+    text-align: left; 
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-top: 75px; 
+}
+
+.service-header p {
+    margin: 0;
+    font-size: 2.5rem; 
+}
+
+.service-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 10rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-box img {
+    width: 5rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.icon-box p {
+    font-size: 1.6rem;
+    color: black;
+}
+
+.icon-box:hover {
+    background-color: #e0f7ff; 
+}
+
+/* Lab Services Section */
+.lab-services {
+    padding: 3rem 5rem;
+}
+
+.lab-services .head {
+    font-size: 2.2rem;
+    color: black;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-text {
+    max-width: 70%;
+}
+
+.card img {
+    width: 4rem;
+    height: auto;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.card-text .nama {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--maincolor);
+    margin-bottom: 0.5rem;
+}
+
+.card:last-child .card-text .nama {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: grey;
+}
+
+.card .tes {
+    margin-bottom: 4rem;
+}
+
+.price {
+    font-size: 1.6rem;
+    color: var(--maincolor);
+    font-weight: 600;
+}
+
+.card-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.3rem;
+    margin-bottom: 3rem
+}
+
+.arrow {
+    background-color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #333;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.pagination-btn {
+    background-color:var(--maincolor);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #4bb1e4;
+}
+
+/* footer */
+.footer {
+    background-color: #3384b8; 
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    margin-bottom: 10px;
+}
+
+.footer-icon {
+    display: inline-block;
+    margin: 0 8px;
+    width: 40px; 
+    height: 40px; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.footer-icon img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    transition: filter 0.3s, transform 0.3s; 
+}
+
+.footer-icon:hover img {
+    transform: translateY(-10px); /* Efek naik */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-top: 10px;
+}

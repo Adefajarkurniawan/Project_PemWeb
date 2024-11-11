@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root{
+    --maincolor:#14a0e6;
+    --secondcolor:#f8a803;
+    --thirdcolor:#f4ab01;
+    --textcolor:#4A5764;
+}
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    outline: none; 
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition:all .2s linear;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* Hover global untuk elemen */
+nav a:hover, 
+.home-btn:hover{ 
+    background-color: var(--maincolor); 
+    color: #ffffff; 
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out; 
+}   
+
+/* Efek hover */
+.inner-technology:hover span, 
+nav a:hover::before, 
+.home-btn a:hover::before { 
+    width: 100%; 
+}
+
+.home-btn::before, 
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--secondcolor);
+    z-index: -1;
+    transition: width 0.5s ease-in-out;
+}
+
+.home-btn:hover::before, 
+nav a:hover::before {
+    width: 100%; 
+}
+
+
+nav a, 
+.home-btn a, 
+.brief-story .read-more {
+    position: relative;
+    overflow: hidden; 
+}
+
+  
+/*  Header/Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: var(--maincolor); 
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 75px;
+    
+  }
+  
+.logo-container img {
+    height: 190px; 
+    width: auto;
+    margin-right: 1rem;
+}
+  
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #00aaff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar header */
+.header-image {
+    margin-top: 100px;
+    padding: 0 10px;
+    width: 100%; 
+    height: 300px; 
+    overflow: hidden; 
+}
+
+.header-image img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Search */
+.doctor-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    padding: 4rem 7rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-section h2 {
+    font-size: 3rem;
+    color: var(--textcolor);
+    font-weight: 400;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.search-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #00aaff;
+}
+
+/* Container Dokter */
+.doctor-list {
+    padding: 2rem 2rem;
+    background-color: #fff;;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-list h2 {
+    font-size: 2rem;
+    color: var(--textcolor);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.doctor-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    height: 200px;
+    width: 1000px;
+    margin-bottom: 10px;
+    margin-left: 105px;
+}
+
+.doctor-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.doctor-photo {
+    width: 60px;
+    height: 60px;
+    margin-right: 1.5rem;
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+.doctor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-info h3 {
+    font-size: 1.6rem;
+    color: var(--textcolor);
+    font-weight: 600;
+}
+
+.doctor-info p {
+    font-size: 1.2rem;
+    color: var(--textcolor);
+    padding: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .doctor-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.card-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem
+}
+
+.arrow {
+    background-color: #fff;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #333;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.pagination-btn {
+    background-color:var(--maincolor);
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #4bb1e4;
+}
+
+/* footer */
+.footer {
+    background-color: #3384b8; 
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    margin-bottom: 10px;
+}
+
+.footer-icon {
+    display: inline-block;
+    margin: 0 8px;
+    width: 40px; 
+    height: 40px; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.footer-icon img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    transition: filter 0.3s, transform 0.3s; 
+}
+
+.footer-icon:hover img {
+    transform: translateY(-10px); /* Efek naik */
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
